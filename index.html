@@ -96,7 +96,7 @@
         <div class="timeline">
           <article class="education-card reveal">
             <span class="education-year">2015 — 2021</span>
-            <h3>SD Negeri 01 Raganan</h3>
+            <h3>SD Negeri 01 Ragunan</h3>
             <p>Pendidikan Sekolah Dasar.</p>
           </article>
           <article class="education-card reveal">
@@ -162,7 +162,7 @@
             </div>
             <div class="project-info">
 
-              <div><span class="project-category">Web Development</span><h3>Personal Profile Website</h3><p>Website profil pribadi yang menampilkan informasi diri, pendidikan, keterampilan, dan portofolio.</p></div><button class="project-open" type="button" aria-label="View details for Personal Profile Website" data-title="Personal Profile Website" data-description="Website profil pribadi yang menampilkan informasi diri, pendidikan, keterampilan, dan portofolio." data-url="">↗</button></div>
+              <div><span class="project-category">Web Development</span><h3>Personal Profile Website</h3><p>Website profil pribadi yang menampilkan informasi diri, pendidikan, keterampilan, dan portofolio.</p></div><button class="project-open" type="button" aria-label="View details for Personal Profile Website" data-title="Personal Profile Website" data-description="Website profil pribadi yang menampilkan informasi diri, pendidikan, keterampilan, dan portofolio." data-url="https://github.com/hairanera-crypto/portofolio-neinaa">↗</button></div>
           </article>
           <article class="project-card reveal" data-categories="web-development ui-ux-design">
             <div class="project-preview preview-nihongo">
@@ -171,7 +171,7 @@
               <!-- <div class="mock-window" aria-hidden="true"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-content"><div class="mock-sidebar"><b></b><i></i><i></i><i></i></div><div class="mock-main"><div class="mock-title"></div><div class="mock-line"></div><div class="mock-line"></div><div class="mock-tiles"><i></i><i></i><i></i></div></div></div></div> -->
               <span class="preview-decoration">日本語を学ぼう</span><div class="project-overlay"><span>Explore project</span></div>
             </div>
-            <div class="project-info"><div><span class="project-category">Educational Website</span><h3>NihongoLearn</h3><p>Website pembelajaran Bahasa Jepang dengan materi Hiragana, Katakana, Kanji, kosakata, grammar, dan kuis interaktif.</p></div><button class="project-open" type="button" aria-label="View details for NihongoLearn" data-title="NihongoLearn" data-description="Website pembelajaran Bahasa Jepang dengan materi Hiragana, Katakana, Kanji, kosakata, grammar, dan kuis interaktif." data-url="">↗</button></div>
+            <div class="project-info"><div><span class="project-category">Educational Website</span><h3>NihongoLearn</h3><p>Website pembelajaran Bahasa Jepang dengan materi Hiragana, Katakana, Kanji, kosakata, grammar, dan kuis interaktif.</p></div><button class="project-open" type="button" aria-label="View details for NihongoLearn" data-title="NihongoLearn" data-description="Website pembelajaran Bahasa Jepang dengan materi Hiragana, Katakana, Kanji, kosakata, grammar, dan kuis interaktif." data-url="https://github.com/hairanera-crypto/portofolio-neinaa">↗</button></div>
           </article>
           <article class="project-card reveal" data-categories="web-development">
             <div class="project-preview preview-majelis">
@@ -180,7 +180,7 @@
               <!-- <div class="mock-window" aria-hidden="true"><div class="mock-top"><i></i><i></i><i></i></div><div class="mock-content"><div class="mock-sidebar"><b></b><i></i><i></i><i></i></div><div class="mock-main"><div class="mock-title"></div><div class="mock-line"></div><div class="mock-line"></div><div class="mock-tiles"><i></i><i></i><i></i></div></div></div></div> -->
               <span class="preview-decoration">Fresh &amp; local</span><div class="project-overlay"><span>Explore project</span></div>
             </div>
-            <div class="project-info"><div><span class="project-category">Web Development</span><h3>Majelis Sayur</h3><p>Website yang dikembangkan untuk kebutuhan informasi dan layanan Majelis Sayur.</p></div><button class="project-open" type="button" aria-label="View details for Majelis Sayur" data-title="Majelis Sayur" data-description="Website yang dikembangkan untuk kebutuhan informasi dan layanan Majelis Sayur." data-url="">↗</button></div>
+            <div class="project-info"><div><span class="project-category">Web Development</span><h3>Majelis Sayur</h3><p>Website yang dikembangkan untuk kebutuhan informasi dan layanan Majelis Sayur.</p></div><button class="project-open" type="button" aria-label="View details for Majelis Sayur" data-title="Majelis Sayur" data-description="Website yang dikembangkan untuk kebutuhan informasi dan layanan Majelis Sayur." data-url="https://majalissayur.vercel.app">↗</button></div>
           </article>
           <article class="project-card reveal" data-categories="web-development">
             <div class="project-preview preview-bank">
@@ -269,7 +269,7 @@
       <p class="section-kicker">Project details</p>
       <h2 id="dialog-title"></h2>
       <p id="dialog-description"></p>
-      <div class="dialog-note" id="dialog-link"></div>
+      <a class="dialog-note" id="dialog-link" target="_blank" rel="noopener noreferrer" hidden>Buka website proyek ↗</a>
     </div>
   </dialog>
 
@@ -344,7 +344,8 @@
         dialogTitle.textContent = button.dataset.title;
         dialogDescription.textContent = button.dataset.description;
         const url = button.dataset.url.trim();
-        dialogLink.textContent = url ? "Open the project link to explore this work." : "Project link coming soon. Add its URL to this card's data-url attribute when it is ready to share.";
+        dialogLink.href = url;
+        dialogLink.hidden = !url;
         if (!projectDialog.open) projectDialog.showModal();
       });
     });
